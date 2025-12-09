@@ -1,0 +1,261 @@
+{
+    "emp1": {
+        "ID": "40799000",
+        "category": "Disease",
+        "keyword set": "MESH:D013119",
+        "keyword": "spinal trauma",
+        "source": "PubTator3"
+    },
+    "emp2": {
+        "ID": "40799000",
+        "category": "Disease",
+        "keyword set": "MESH:D013167",
+        "keyword": "ankylosing spondylitis",
+        "source": "PubTator3"
+    },
+    "emp3": {
+        "ID": "40740000",
+        "category": "Disease",
+        "keyword set": "MESH:D003141",
+        "keyword": "infectious diseases",
+        "source": "PubTator3"
+    },
+    "emp4": {
+        "ID": "40765000",
+        "category": "Disease",
+        "keyword set": "MESH:D016649",
+        "keyword": "premature ovarian insufficiency|POI|Premature ovarian insufficiency",
+        "source": "PubTator3"
+    },
+    "emp5": {
+        "ID": "40763000",
+        "category": "Disease",
+        "keyword set": "MESH:D003141",
+        "keyword": "infectious",
+        "source": "PubTator3"
+    },
+    "emp6": {
+        "ID": "40763000",
+        "category": "Disease",
+        "keyword set": "MESH:D007669",
+        "keyword": "stone",
+        "source": "PubTator3"
+    },
+    "emp7": {
+        "ID": "40772000",
+        "category": "Disease",
+        "keyword set": "MESH:D012559",
+        "keyword": "schizophrenia|Schizophrenia",
+        "source": "PubTator3"
+    },
+    "emp8": {
+        "ID": "40772000",
+        "category": "Disease",
+        "keyword set": "MESH:D009459",
+        "keyword": "neuroleptic malignant syndrome|NMS",
+        "source": "PubTator3"
+    },
+    "emp9": {
+        "ID": "40772000",
+        "category": "Disease",
+        "keyword set": "MESH:D002389",
+        "keyword": "catatonic symptoms|catatonia|Catatonia",
+        "source": "PubTator3"
+    },
+    "emp10": {
+        "ID": "40772000",
+        "category": "Disease",
+        "keyword set": "MESH:D001523",
+        "keyword": "neuropsychiatric condition",
+        "source": "PubTator3"
+    },
+    "emp11": {
+        "ID": "40772000",
+        "category": "Disease",
+        "keyword set": "MESH:D012560",
+        "keyword": "catatonic schizophrenia",
+        "source": "PubTator3"
+    },
+    "emp12": {
+        "ID": "40767000",
+        "category": "Disease",
+        "keyword set": "MESH:D000068079",
+        "keyword": "motor",
+        "source": "PubTator3"
+    },
+    "emp13": {
+        "ID": "40767000",
+        "category": "Disease",
+        "keyword set": "MESH:D015430",
+        "keyword": "weight gain",
+        "source": "PubTator3"
+    },
+    "emp14": {
+        "ID": "40767000",
+        "category": "Disease",
+        "keyword set": "MESH:D007888",
+        "keyword": "LS|Leigh syndrome|Leigh Syndrome",
+        "source": "PubTator3"
+    },
+    "emp15": {
+        "ID": "40767000",
+        "category": "Disease",
+        "keyword set": "MESH:D007249",
+        "keyword": "Inflammation|inflammation",
+        "source": "PubTator3"
+    },
+    "emp16": {
+        "ID": "40767000",
+        "category": "Disease",
+        "keyword set": "MESH:D000090862",
+        "keyword": "neuroinflammation",
+        "source": "PubTator3"
+    },
+    "emp17": {
+        "ID": "40767000",
+        "category": "Disease",
+        "keyword set": "MESH:D019636",
+        "keyword": "neurodegenerative disease",
+        "source": "PubTator3"
+    },
+    "emp18": {
+        "ID": "40569000",
+        "category": "Disease",
+        "keyword set": "OMIM:303800",
+        "keyword": "TS",
+        "source": "PubTator3"
+    },
+    "emp19": {
+        "ID": "40569000",
+        "category": "Disease",
+        "keyword set": "MESH:C564523",
+        "keyword": "XMCD",
+        "source": "PubTator3"
+    },
+    "emp20": {
+        "ID": "40769000",
+        "category": "Disease",
+        "keyword set": "MESH:D064420",
+        "keyword": "toxicity",
+        "source": "PubTator3"
+    },
+    "emp21": {
+        "ID": "40769000",
+        "category": "Disease",
+        "keyword set": "MESH:D009369",
+        "keyword": "cancer",
+        "source": "PubTator3"
+    },
+    "emp22": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D000163",
+        "keyword": "acquired immunodeficiency syndrome",
+        "source": "PubTator3"
+    },
+    "emp23": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:C566784",
+        "keyword": "CCI",
+        "source": "PubTator3"
+    },
+    "emp24": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D001327",
+        "keyword": "autoimmune disease",
+        "source": "PubTator3"
+    },
+    "emp25": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D013585",
+        "keyword": "synovitis",
+        "source": "PubTator3"
+    },
+    "emp26": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D007239",
+        "keyword": "infection",
+        "source": "PubTator3"
+    },
+    "emp27": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D002561",
+        "keyword": "vascular disorders",
+        "source": "PubTator3"
+    },
+    "emp28": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D010146",
+        "keyword": "pain",
+        "source": "PubTator3"
+    },
+    "emp29": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D007333",
+        "keyword": "insulin resistance",
+        "source": "PubTator3"
+    },
+    "emp30": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D001172",
+        "keyword": "rheumatoid arthritis|RA|Rheumatoid arthritis",
+        "source": "PubTator3"
+    },
+    "emp31": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D007249",
+        "keyword": "inflammatory|inflammation|Chronic inflammation|systemic inflammation",
+        "source": "PubTator3"
+    },
+    "emp32": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D003924",
+        "keyword": "type 2 DM",
+        "source": "PubTator3"
+    },
+    "emp33": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D015658",
+        "keyword": "human immunodeficiency virus infection",
+        "source": "PubTator3"
+    },
+    "emp34": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D002318",
+        "keyword": "cardiovascular death|cardiovascular diseases",
+        "source": "PubTator3"
+    },
+    "emp35": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D003920",
+        "keyword": "Diabetes mellitus|DM|diabetes mellitus",
+        "source": "PubTator3"
+    },
+    "emp36": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:C536681",
+        "keyword": "micro- or macroangiopathy",
+        "source": "PubTator3"
+    },
+    "emp37": {
+        "ID": "40749000",
+        "category": "Disease",
+        "keyword set": "MESH:D002386",
+        "keyword": "cataract",
+        "source": "PubTator3"
+    }
+}
