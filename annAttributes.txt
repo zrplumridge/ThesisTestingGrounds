@@ -1,0 +1,127 @@
+Feb 23 2026: Trying to figure out ann_id and rel_id 
+python code: 
+ann_id = str(ann.attrib)
+
+beginning of xml: 
+b'<annotation id="2">\n  <infon key="identifier">MESH:C029010</infon>\n  <infon key="type">Chemical</infon>\n  <location offset="88" length="13"/>\n  <text>Cinnamic Acid</text>\n</annotation>\n'
+
+returns: 
+annotations
+            id                             ann_id       doc_id  passage_id  \
+0            1              {'key': 'identifier'}  PMC12349510           4   
+1            2                    {'key': 'type'}  PMC12349510           4   
+2            3  {'offset': '2677', 'length': '7'}  PMC12349510           4   
+3            4                                 {}  PMC12349510           4   
+4            5              {'key': 'identifier'}  PMC12349510           4   
+...        ...                                ...          ...         ...   
+311156  311157                                 {}     38142689       51064   
+311157  311158              {'key': 'identifier'}     38142689       51064   
+311158  311159                    {'key': 'type'}     38142689       51064   
+311159  311160  {'offset': '7102', 'length': '8'}     38142689       51064   
+311160  311161                                 {}     38142689       51064   
+
+       sentence_id location_offset location_length      type      text  \
+0                5            None            None  Chemical   phenols   
+1                5            None            None  Chemical   phenols   
+2                5            None            None  Chemical   phenols   
+3                5            None            None  Chemical   phenols   
+4                6            None            None  Chemical  terpenes   
+...            ...             ...             ...       ...       ...   
+311156      152709            None            None   Disease       MPN   
+311157      152710            None            None   Species  patients   
+311158      152710            None            None   Species  patients   
+311159      152710            None            None   Species  patients   
+311160      152710            None            None   Species  patients   
+
+                                                   infons  
+0       {"identifier": "MESH:D010636", "type": "Chemic...  
+1       {"identifier": "MESH:D010636", "type": "Chemic...  
+2       {"identifier": "MESH:D010636", "type": "Chemic...  
+3       {"identifier": "MESH:D010636", "type": "Chemic...  
+4       {"identifier": "MESH:D013729", "type": "Chemic...  
+...                                                   ...  
+311156                                {"type": "Disease"}  
+311157          {"identifier": "9606", "type": "Species"}  
+311158          {"identifier": "9606", "type": "Species"}  
+311159          {"identifier": "9606", "type": "Species"}  
+311160          {"identifier": "9606", "type": "Species"} 
+
+so attributes refer to <annotation> <the bit here> </annotation> 
+this will be helpful for getting location_offset and location_length but not ann_id
+ann_id is an int
+ann_id = ann.attrib["id"] >> dictionary, needs to be in string form
+ann_id = ann.attrib[id] >> gets a method 
+ann_id = ann.attrib[] >> SyntaxError: invalid syntax. Perhaps you forgot a comma?
+ann_id = str(ann.tag) >> gets infon/infon/location/text
+ann_id = str(sentence.tag) >> annotation
+ann_id = str(sentence.attrib) >> {'id': '1159'} >> which I think should be correct! remove from dictionary though 
+ann_id = str(sentence.attrib["id"]) >> 1159 >> YESSSS
+This works for annotations inside of sentences - what do I need to change to make it work for the other types?
+Is confirmed different from passage_id and sentence_id values so should be getting from correct
+
+for rel_id after documents
+rel_id = str(elem.attrib["id"]) >> KeyError: 'id'
+rel_id = str(elem.attrib) >> {} {} {} and is messing with which articles come up 
+rel_id = str(elem.tag) >> document and is no longer messing with articles but is only line (because of replacing and same primary key)
+
+rel_id = str(rel.attrib)
+returns:
+relations
+      id        rel_id    doc_id  passage_id sentence_id  \
+0      1  {'id': 'R1'}  37036631       43229        None   
+1      2  {'id': 'R2'}  37036631       43229        None   
+2      3  {'id': 'R3'}  37036631       43229        None   
+3      4  {'id': 'R4'}  37036631       43229        None   
+4      5  {'id': 'R5'}  37036631       43229        None   
+..   ...           ...       ...         ...         ...   
+152  153  {'id': 'R1'}   1988965       52974        None   
+153  154  {'id': 'R2'}   1988965       52974        None   
+154  155  {'id': 'R3'}   1988965       52974        None   
+155  156  {'id': 'R4'}   1988965       52974        None   
+156  157  {'id': 'R5'}   1988965       52974        None   
+
+                                                infons  \
+0    {"score": "0.9633", "role1": "Chemical|MESH:D0...   
+1    {"score": "0.9727", "role1": "Chemical|MESH:D0...   
+2    {"score": "0.8226", "role1": "Chemical|MESH:D0...   
+3    {"score": "0.991", "role1": "Chemical|MESH:D00...   
+4    {"score": "0.9892", "role1": "Chemical|MESH:D0...   
+..                                                 ...   
+152  {"score": "0.8769", "role1": "Gene|13809", "ro...   
+153  {"score": "0.8945", "role1": "Chemical|MESH:D0...   
+154  {"score": "0.7653", "role1": "Chemical|MESH:D0...   
+155  {"score": "0.9914", "role1": "Chemical|MESH:D0...   
+156  {"score": "0.9982", "role1": "Chemical|MESH:C0...   
+
+                        edges  
+0    ({'id': 'R1'}, 37036631)  
+1    ({'id': 'R2'}, 37036631)  
+2    ({'id': 'R3'}, 37036631)  
+3    ({'id': 'R4'}, 37036631)  
+4    ({'id': 'R5'}, 37036631)  
+..                        ...  
+152   ({'id': 'R1'}, 1988965)  
+153   ({'id': 'R2'}, 1988965)  
+154   ({'id': 'R3'}, 1988965)  
+155   ({'id': 'R4'}, 1988965)  
+156   ({'id': 'R5'}, 1988965)  
+
+[157 rows x 7 columns]
+relation_nodes
+      id        rel_id refid   role
+0      1  {'id': 'R1'}     0    0,1
+1      2  {'id': 'R1'}     0    1,0
+2      3  {'id': 'R1'}     0    0,2
+3      4  {'id': 'R2'}     1    1,2
+4      5  {'id': 'R1'}     0    2,0
+..   ...           ...   ...    ...
+146  147  {'id': 'R1'}     0    4,5
+147  148  {'id': 'R2'}     1  20,17
+148  149  {'id': 'R3'}     2  19,17
+149  150  {'id': 'R4'}     3  12,15
+150  151  {'id': 'R5'}     4  14,15
+
+[151 rows x 4 columns]
+what do R1, R2, etc mean? something related to role?? 
+rel_id = str(rel.attrib['id']) >> R1, R2, R3 . . . R20
+rel_id = str(rel.tag) >> relation
