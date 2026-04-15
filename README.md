@@ -1,6 +1,9 @@
 # Thesis Testing Grounds
 Testing code to eventually use for my senior honors thesis. Local graph databases, python packages, and managing large amounts of information on biomedical literature.
 
+Primary code: OntDiscover.ipynb
+Jupyter notebook, was run on UNITY. 
+
 Data from pubmed and pubmedcentral via pubtator3
 
 Current packages being used:  
